@@ -70,8 +70,36 @@ main {
   width: 10rem;
   height: 11.5rem;
   object-fit: cover;
+  transition: 0.2s;
 
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.avatar > img:hover {
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+
+.avatar span {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 h1 {
@@ -117,11 +145,12 @@ ul {
   justify-content: center;
 }
 
-ul li a {
+ul li {
   transition: 0.2s;
 }
 
-ul li a:hover {
+ul li:hover {
+  transform: translateY(-0.5rem);
   filter: brightness(0.8);
   transition: 0.2s;
 }
