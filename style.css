@@ -4,6 +4,7 @@
 
 html,
 body {
+  overflow: hidden;
   --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
 
@@ -134,7 +135,7 @@ p {
 }
 
 ul {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 
   list-style: none;
   padding: 0;
@@ -144,22 +145,74 @@ ul {
 
   justify-content: center;
 }
-
+ul li a img {
+  border-radius: 8px;
+}
 ul li {
   transition: 0.2s;
+  border-radius: 8px;
 }
 
 ul li:hover {
   transform: translateY(-0.5rem);
   filter: brightness(0.8);
   transition: 0.2s;
+  border-bottom: 5px solid #a41299;
+  border: 1px solid #3d3d3d;
 }
 
-/* responsive */
-@media screen and (min-width: 1024px) {
+/* -= responsive =- */
+
+/* small devices */
+
+@media (min-width: 960px) {
+  /* estilos versão desktop */
   html,
   body {
     background: rgb(18, 18, 20);
+  }
+
+  html {
+    background: linear-gradient(179deg, #ff00ea, #00ffbe, #9800ff, #005fff);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+  }
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 49% 0%;
+    }
+    50% {
+      background-position: 52% 100%;
+    }
+    100% {
+      background-position: 49% 0%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 49% 0%;
+    }
+    50% {
+      background-position: 52% 100%;
+    }
+    100% {
+      background-position: 49% 0%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 49% 0%;
+    }
+    50% {
+      background-position: 52% 100%;
+    }
+    100% {
+      background-position: 49% 0%;
+    }
   }
 
   body {
@@ -167,22 +220,12 @@ ul li:hover {
   }
 
   main {
+    /* transform: translateY(-1.3rem); */
     display: flex;
     background: none;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     height: 100%;
-  }
-
-  faixa {
-    position: absolute;
-    width: 64px;
-    height: 158px;
-    left: 688px;
-    top: 0px;
-
-    background: linear-gradient(161.24deg, #ff008e -15.25%, #ffcd1e 111.89%);
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
