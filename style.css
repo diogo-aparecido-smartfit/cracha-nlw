@@ -44,6 +44,10 @@ main {
   height: 100vw;
 }
 
+.card-mask {
+  display: none;
+}
+
 .container {
   max-width: 250px;
   margin-left: auto;
@@ -166,12 +170,6 @@ ul li:hover {
 /* small devices */
 
 @media (min-width: 960px) {
-  /* estilos versão desktop */
-  html,
-  body {
-    background: rgb(18, 18, 20);
-  }
-
   html {
     background: linear-gradient(179deg, #ff00ea, #00ffbe, #9800ff, #005fff);
     background-size: 800% 800%;
@@ -215,8 +213,54 @@ ul li:hover {
     }
   }
 
+  .card-mask {
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: -33.9rem;
+    transform: translateY(-8.7rem);
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6.9rem;
+    width: 22.375rem;
+    height: 33.75rem;
+    /* opacity: 0.5; */
+    background: rgba(46, 49, 49, 0.3);
+    z-index: -1;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  #socialLinks {
+    opacity: 0.6;
+  }
+
   body {
-    background: url(./images/desktop.svg) no-repeat center/cover;
+    background: none;
   }
 
   main {
