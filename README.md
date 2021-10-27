@@ -1,6 +1,6 @@
 # Cracha NLW
 
-<img src="preview.png" alt="example project">
+<img src="project.png" alt="example project">
 
 > Cracha exclusivo para uso na DoWhile 2021, criado na NLW Heat da RocketSeat. O cracha contém informmações sobre a pessoa na qual está utilizando.
 
